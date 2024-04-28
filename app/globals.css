@@ -35,6 +35,28 @@
         --radius: 0.5rem;
     }
 
+    .selected{
+        background-color: aquamarine;
+    }
+    .resizer {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 5px;
+        background: rgba(0, 0, 0, 0.5);
+        cursor: col-resize;
+        user-select: none;
+        touch-action: none;
+      }
+      
+      .resizer.isResizing {
+        background: blue;
+        opacity: 1;
+      }
+      .left-30{
+        left:90px;
+      }
     .dark {
         --background: 222.2 84% 4.9%;
         --foreground: 210 40% 98%;
