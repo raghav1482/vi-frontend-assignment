@@ -4,13 +4,13 @@ import { Badge } from "@/components/ui/badge";
 import { type ColumnDef } from "@tanstack/react-table";
 import { labels, priorities, statuses } from "../_constants/metadata";
 import { type Task } from "../_constants/schema";
-import { Checkbox } from "@/components/ui/checkbox";
+import { ICheckbox } from "@/components/ui/Icheckbox";
 
 export const columns: Array<ColumnDef<Task>> = [
     {
         accessorKey: "check",
         header: ({ table }) => (
-          <Checkbox
+          <ICheckbox
             {...{
               checked: table.getIsAllRowsSelected(),
               indeterminate: table.getIsSomeRowsSelected(),
@@ -19,7 +19,7 @@ export const columns: Array<ColumnDef<Task>> = [
           />
         ),
         cell: ({ row }) => (
-          <Checkbox
+          <ICheckbox
             {...{
               checked: row.getIsSelected(),
               disabled: !row.getCanSelect(),
